@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "DbtimeMobile"
+rootProject.name = "Dbtime_Watch"
 include ':app'
