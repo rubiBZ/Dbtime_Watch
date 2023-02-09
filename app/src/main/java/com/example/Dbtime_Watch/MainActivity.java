@@ -1,6 +1,4 @@
-package com.example.dbtimemobile;
-
-import static androidx.core.content.ContentProviderCompat.requireContext;
+package com.example.Dbtime_Watch;
 
 import android.Manifest;
 import android.app.Activity;
@@ -16,13 +14,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.work.OneTimeWorkRequest;
-import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
-import androidx.work.WorkRequest;
 
-import com.example.dbtimemobile.databinding.ActivityMainBinding;
-
-import java.util.concurrent.TimeUnit;
+import com.example.Dbtime_Wathc.databinding.ActivityMainBinding;
+import com.example.Dbtime_Wathc.R;
 
 public class MainActivity extends Activity {
 
@@ -54,7 +49,7 @@ public class MainActivity extends Activity {
        // WorkRequest PSN = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             //PSN = new PeriodicWorkRequest.Builder(ScheduleNotifications.class, 1, TimeUnit.HOURS)
-            OneTimeWorkRequest PSN = new OneTimeWorkRequest.Builder(ScheduleNotifications.class)
+            OneTimeWorkRequest PSN = new OneTimeWorkRequest.Builder(com.example.Dbtime_Watch.ScheduleNotifications.class)
                     .addTag("cleanup")
                     .build();
             WorkManager.getInstance(this).enqueue(PSN);
@@ -73,14 +68,14 @@ public class MainActivity extends Activity {
         (new Handler()).postDelayed(this::gotomenue, 3000);
         findViewById(R.id.text).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(MainActivity.this, MainActivity3.class);
+                Intent myIntent = new Intent(MainActivity.this, com.example.Dbtime_Watch.MainActivity3.class);
                 MainActivity.this.startActivity(myIntent);
             }
         });
     }
 
     private void gotomenue() {
-        Intent myIntent = new Intent(MainActivity.this, MainActivity3.class);
+        Intent myIntent = new Intent(MainActivity.this, com.example.Dbtime_Watch.MainActivity3.class);
         MainActivity.this.startActivity(myIntent);
     }
 }

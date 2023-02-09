@@ -1,12 +1,12 @@
-package com.example.dbtimemobile;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.Dbtime_Watch;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.Dbtime_Wathc.R;
 
 public class MainActivity3 extends Activity {
 

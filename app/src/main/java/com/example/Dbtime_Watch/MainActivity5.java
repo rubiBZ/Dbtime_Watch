@@ -1,11 +1,7 @@
-package com.example.dbtimemobile;
+package com.example.Dbtime_Watch;
 
-import static com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_SHORT;
 import static com.google.android.material.snackbar.Snackbar.make;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
 import android.hardware.Sensor;
@@ -20,11 +16,10 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.android.material.snackbar.Snackbar;
+import com.example.Dbtime_Wathc.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 public class MainActivity5 extends Activity implements SensorEventListener {
 

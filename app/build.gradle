@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.dbtimemobile'
+    namespace 'com.example.Dbtime_Wathc'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.dbtimemobile"
+        applicationId "com.example.Dbtime_Wathc"
         minSdk 30
         targetSdk 32
         versionCode 1

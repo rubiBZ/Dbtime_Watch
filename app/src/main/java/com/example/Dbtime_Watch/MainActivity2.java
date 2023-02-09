@@ -1,15 +1,13 @@
-package com.example.dbtimemobile;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.Dbtime_Watch;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
+
+import com.example.Dbtime_Wathc.R;
 
 import java.util.List;
 

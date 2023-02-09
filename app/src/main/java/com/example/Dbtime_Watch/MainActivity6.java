@@ -1,15 +1,12 @@
-package com.example.dbtimemobile;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.Dbtime_Watch;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.android.material.textfield.TextInputEditText;
+import com.example.Dbtime_Wathc.R;
 
 import java.util.ArrayList;
 

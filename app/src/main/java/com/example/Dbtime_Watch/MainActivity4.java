@@ -1,18 +1,16 @@
-package com.example.dbtimemobile;
+package com.example.Dbtime_Watch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 
-public class MainActivity9 extends Activity {
+import com.example.Dbtime_Wathc.R;
+
+public class MainActivity4 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main9);
-
-
-
+        setContentView(R.layout.activity_main4);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.dbtimemobile;
+package com.example.Dbtime_Watch;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -12,6 +12,8 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
+
+import com.example.Dbtime_Wathc.R;
 
 import java.time.OffsetTime;
 

@@ -1,19 +1,15 @@
-package com.example.dbtimemobile;
+package com.example.Dbtime_Watch;
 
 import static java.lang.Long.valueOf;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.textfield.TextInputEditText;
+import com.example.Dbtime_Wathc.R;
 
 import java.util.ArrayList;
 import java.util.Calendar;

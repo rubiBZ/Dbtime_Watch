@@ -1,14 +1,13 @@
-package com.example.dbtimemobile;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.Dbtime_Watch;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import com.example.Dbtime_Wathc.R;
 
 
 public class MainActivity10 extends Activity {
