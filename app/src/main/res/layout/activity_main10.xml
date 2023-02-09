@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@raw/meditation_bg_sqr"
-    tools:context=".MainActivity10">
+    tools:context="com.example.Dbtime_Watch.MainActivity10">
 
     <ImageView
         android:id="@+id/imageView6"

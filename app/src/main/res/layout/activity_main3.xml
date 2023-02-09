@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@raw/nightsqr"
     android:id = "@+id/mn"
-    tools:context=".MainActivity3">
+    tools:context="com.example.Dbtime_Watch.MainActivity3">
 
     <ImageView
         android:id="@+id/imageView2"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@raw/sqr2"
-    tools:context=".AlertDetails">
+    tools:context="com.example.Dbtime_Watch.AlertDetails">
 
     <TextView
         android:id="@+id/textView"
