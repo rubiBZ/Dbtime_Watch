@@ -66,37 +66,34 @@ public class MainActivity5 extends Activity implements SensorEventListener {
     }
 
     private void showBtn() {
-
         findViewById(R.id.button3).setVisibility(View.VISIBLE);
         TextView tv = findViewById(R.id.textView4);
         tv.setTextSize(40);
     }
 
+    private void getHeartRate() {
+        SensorManager mSensorManager = ((SensorManager)getSystemService(SENSOR_SERVICE));
+        Sensor mHeartRateSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
+        mSensorManager.registerListener(this, mHeartRateSensor, SensorManager.SENSOR_DELAY_NORMAL);
+    }
 
-        private void getHeartRate() {
-            SensorManager mSensorManager = ((SensorManager)getSystemService(SENSOR_SERVICE));
-            Sensor mHeartRateSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
-            mSensorManager.registerListener(this, mHeartRateSensor, SensorManager.SENSOR_DELAY_NORMAL);
-        }
+    private String currentTimeStr() {
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
+        return df.format(c.getTime());
+    }
 
-        private String currentTimeStr() {
-            Calendar c = Calendar.getInstance();
-            SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
-            return df.format(c.getTime());
+    public void onSensorChanged(SensorEvent event) {
+        if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
+            String msg = "" + (int)event.values[0];
+            hr= String.valueOf(event.values[0]);
+            hr= String.valueOf((int)event.values[0]);
+            if ((int)event.values[0]>0) mTextViewHeart.setText(msg);
+            Log.d(TAG, "#1 " + msg);
         }
-
-        public void onSensorChanged(SensorEvent event) {
-            if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
-                String msg = "" + (int)event.values[0];
-                hr= String.valueOf(event.values[0]);
-                hr= String.valueOf((int)event.values[0]);
-               // mTextViewHeart.setTextSize(40);
-                if ((int)event.values[0]>0) mTextViewHeart.setText(msg);
-                Log.d(TAG, "#1 " + msg);
-            }
-            else
-                Log.d(TAG, "#2 "+"Unknown sensor type");
-        }
+        else
+            Log.d(TAG, "#2 "+"Unknown sensor type");
+    }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int i) {
@@ -112,7 +109,7 @@ public class MainActivity5 extends Activity implements SensorEventListener {
         sample.put("timeMS", nowMS);
 
         db.collection("users").document(email)
-                .collection("notificationFB").document("list")
+                .collection("measures").document("list")
                 .set(sample)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
