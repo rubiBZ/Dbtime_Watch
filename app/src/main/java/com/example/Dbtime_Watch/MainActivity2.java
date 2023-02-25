@@ -22,7 +22,7 @@ public class MainActivity2 extends Activity {
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         List<Sensor> deviceSensors = sensorManager.getSensorList(Sensor.TYPE_ALL);
         for (int i = 0; i < deviceSensors.size(); i++) {
-           Log.d("tag", String.valueOf(deviceSensors.get(i)));
+           Log.d("RRubi", String.valueOf(deviceSensors.get(i)));
        }
     }
 }
