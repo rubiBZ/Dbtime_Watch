@@ -38,13 +38,16 @@ public class MainActivity5 extends Activity implements SensorEventListener {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     Button sendBtn;
     public FirebaseAuth mAuth;
-    private SensorManager mSensorManager;
-    private Sensor mHeartRateSensor;
+    public SensorManager mSensorManager;
+    public Sensor mHeartRateSensor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
+
+        getHeartRate();
 
         TAG = "test";
         mAuth = FirebaseAuth.getInstance();
@@ -56,9 +59,6 @@ public class MainActivity5 extends Activity implements SensorEventListener {
         (new Handler()).postDelayed(this::showBtn, 12000);
         tv2 = findViewById(R.id.textView2);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
-        getHeartRate();
-
         sendBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 addHeartRateToDB();
@@ -118,7 +118,8 @@ public class MainActivity5 extends Activity implements SensorEventListener {
                         findViewById(R.id.button3).setVisibility(View.INVISIBLE);
                         tv2.setVisibility(View.VISIBLE);
                         tv2.setText(ms);
-                        (new Handler()).postDelayed(this::goHome, 5000);
+
+                        (new Handler()).postDelayed(this::goHome, 3000);
                         Log.d("RRubi", "DocumentSnapshot successfully written!");
                     }
                     private void goHome() {
@@ -133,13 +134,11 @@ public class MainActivity5 extends Activity implements SensorEventListener {
                     }
                 });
     }
-/*
+
     protected void onPause() {
         super.onPause();
         mSensorManager.unregisterListener(this);
     }
-
- */
 
     protected void onResume() {
         super.onResume();
