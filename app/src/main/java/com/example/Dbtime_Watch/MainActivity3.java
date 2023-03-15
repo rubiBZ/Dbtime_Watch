@@ -39,15 +39,6 @@ public class MainActivity3 extends Activity {
             }
         });
 
-        findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent myIntent = new Intent(MainActivity3.this, MainActivity2.class);
-                MainActivity3.this.startActivity(myIntent);
-            }
-        });
-
-
-
         findViewById(R.id.imageView2).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(MainActivity3.this, MainActivity10.class);

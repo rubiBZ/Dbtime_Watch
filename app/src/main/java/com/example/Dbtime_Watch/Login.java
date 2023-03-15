@@ -51,6 +51,7 @@ public class Login extends Activity {
                 String password = passwordEdt.getText().toString();
                 if (TextUtils.isEmpty(email) && TextUtils.isEmpty(password)) {
                     Toast.makeText(Login.this, "נא להכניס אימייל וסיסמא שאיתם נרשמת למערכת", Toast.LENGTH_SHORT).show();
+                    loginBtn.setVisibility(View.VISIBLE);
                     return;
                 }
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -62,6 +63,7 @@ public class Login extends Activity {
                             startActivity(i);
                             finish();
                         } else {
+                            loginBtn.setVisibility(View.VISIBLE);
                             Toast.makeText(Login.this, "אימייל או סיסמא שגויים, נא נסה שנית", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -73,13 +75,14 @@ public class Login extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-
-
+        /*
         FirebaseUser user = mAuth.getCurrentUser();
         if (user != null) {
             Intent i = new Intent(Login.this, MainActivity.class);
             startActivity(i);
             this.finish();
         }
+
+         */
     }
-}
+  }
