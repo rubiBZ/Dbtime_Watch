@@ -75,7 +75,7 @@ public class Login extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        /*
+
         FirebaseUser user = mAuth.getCurrentUser();
         if (user != null) {
             Intent i = new Intent(Login.this, MainActivity.class);
@@ -83,6 +83,6 @@ public class Login extends Activity {
             this.finish();
         }
 
-         */
+
     }
   }

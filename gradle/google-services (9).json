@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "562486981720",
+    "project_id": "dbtime-15db5",
+    "storage_bucket": "dbtime-15db5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562486981720:android:07e064adbb00956880462d",
+        "android_client_info": {
+          "package_name": "com.example.Dbtime_Mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562486981720-nd4a0i32g8ska86h49m3pl1b6ssotf7f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.Dbtime_Mobile",
+            "certificate_hash": "4c538dbc0b3867c5a04531eea31645479ef82f09"
+          }
+        },
+        {
+          "client_id": "562486981720-cl92qu60nuq2hkv1udgqspk976ja6k2l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9pIDp1_MLZ-X30xYjPT3L1ymLSIlzYvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562486981720-cl92qu60nuq2hkv1udgqspk976ja6k2l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562486981720:android:4346b6c153d690d380462d",
+        "android_client_info": {
+          "package_name": "com.example.Dbtime_Wathc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562486981720-cl92qu60nuq2hkv1udgqspk976ja6k2l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9pIDp1_MLZ-X30xYjPT3L1ymLSIlzYvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562486981720-cl92qu60nuq2hkv1udgqspk976ja6k2l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

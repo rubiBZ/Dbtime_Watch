@@ -73,6 +73,7 @@ public class MainActivity5 extends Activity implements SensorEventListener {
     }
 
     public void getHeartRate() {
+       // Log.d("RRubi", "#1 ");
         mSensorManager = ((SensorManager)getSystemService(SENSOR_SERVICE));
         mHeartRateSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
         mSensorManager.registerListener(this, mHeartRateSensor, SensorManager.SENSOR_DELAY_FASTEST);
@@ -85,6 +86,7 @@ public class MainActivity5 extends Activity implements SensorEventListener {
     }
 
     public void onSensorChanged(SensorEvent event) {
+      //  Log.d("RRubi", "#2 ");
             if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
                 String msg = "" + (int)event.values[0];
                 hr= String.valueOf(event.values[0]);
@@ -135,10 +137,13 @@ public class MainActivity5 extends Activity implements SensorEventListener {
                 });
     }
 
+
     protected void onPause() {
+      //  Log.d("RRubi", "#9 ");
         super.onPause();
         mSensorManager.unregisterListener(this);
     }
+
 
     protected void onResume() {
         super.onResume();
